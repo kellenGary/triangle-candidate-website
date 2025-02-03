@@ -4,7 +4,7 @@ export default function Navbar({ activePage, setActivePage }) {
     }
 
     return (
-        <div className="fixed z-30 grid grid-cols-5 place-items-center w-screen py-8 pb-8 bg-gradient-to-b bg-opacity-50 from-black to-transparent">
+        <div className="fixed z-30 grid grid-cols-5 place-items-center w-screen py-8 pb-8 bg-gradient-to-b bg-opacity-50 from-[#171717] to-transparent">
             <a href={"https://chapterspot.triangle.org/home"} target={"_blank"}>
                 <img src="t.png" alt="logo" className={"cursor-pointer w-36 h-auto grayscale brightness-200 hover:grayscale-0 transition-all duration-300"} />
             </a>

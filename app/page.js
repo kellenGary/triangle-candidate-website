@@ -17,7 +17,7 @@ export default function Page() {
     const [activePage, setActivePage] = useState('home')
 
     return (
-    <div className={"h-screen w-auto bg-gradient-to-br from-gray-950 to-black justify-center"}>
+    <div className={"h-fit min-h-screen w-auto bg-[#171717] justify-center"}>
         <Navbar activePage={activePage} setActivePage={setActivePage}/>
         {activePage === "home" ? (
             <Home />

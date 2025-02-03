@@ -1,5 +1,6 @@
 import Leaderboard from './Leaderboard'
 import Footer from "@/app/footer";
+import Upcoming from "@/app/upcoming";
 
 export default function Home() {
     return (
@@ -9,6 +10,9 @@ export default function Home() {
                      WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%)",
                      maskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%)"
                  }}/>
+
+
+            <Upcoming />
             <Leaderboard />
             <div className={"m-12"} >
                 <a target={"_blank"}
