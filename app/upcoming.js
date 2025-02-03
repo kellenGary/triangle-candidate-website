@@ -3,7 +3,7 @@ import Event from "@/app/event";
 export default function Upcoming() {
     return (
         <>
-            <span>Upcoming</span>
+            <span className={'text-6xl p-20 font-light underline underline-offset-auto'}>Upcoming</span>
             <div className={"flex flex-row gap-12"}>
                 <Event
                     name={'Bachelor Mondays'}
