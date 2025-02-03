@@ -2,7 +2,6 @@
 
 import LeaderboardUser from "./LeaderboardUser.js";
 import { useEffect, useState } from "react";
-
 const Leaderboard = () => {
     const [userData, setUserData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -16,6 +15,8 @@ const Leaderboard = () => {
                 let user = data[i];
                 let name = user[1];
                 let score = user[0];
+
+                name = name.toLowerCase();
 
                 let scores = score.split(" / ").map(num => parseInt(num, 10));
 
@@ -64,7 +65,7 @@ const Leaderboard = () => {
     }, []);
 
     if (loading) {
-        return <div className="text-center">Loading...</div>;
+        return <div>Loading...</div>;
     }
 
     if (error) {
@@ -73,7 +74,7 @@ const Leaderboard = () => {
 
     return (
         <div className="flex flex-col items-center w-fit justify-center">
-            <h1 className="text-2xl p-8 font-extralight">Leaderboard</h1>
+            <h1 className="text-2xl p-8 font-extralight">Current Leaderboard</h1>
             <div className="w-screen table-auto border-collapse max-w-lg ">
                 <div className="table w-full ">
                     <div className="table-header-group border border-gray-700">
@@ -86,7 +87,9 @@ const Leaderboard = () => {
                     <div className="table-row-group">
                         {userData.length > 0 ? (
                             userData.map((user, index) => (
-                                <LeaderboardUser key={index} user={{ rank: index + 1, name: user.name, score: user.score }} />
+                                <LeaderboardUser key={index} user={{ rank: index + 1,
+                                    name: user.name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
+                                    score: user.score }} />
                             ))
                         ) : (
                             <div className="table-row">

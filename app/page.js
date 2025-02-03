@@ -27,8 +27,6 @@ export default function Page() {
             <PledgeTest />
         ) : activePage === "calendar" ? (
             <Calendar />
-        ) : activePage === "contacts" ? (
-            <Contacts />
         ) : (
             <></>
         )}

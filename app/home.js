@@ -11,7 +11,8 @@ export default function Home() {
                  }}/>
             <Leaderboard />
             <div className={"m-12"} >
-                <a href={"https://docs.google.com/forms/d/e/1FAIpQLSdycHGGl_wmdq-wueqfU2SdzJ0lJY7Nju3FRsfDW6QZsNET6g/viewform?usp=header"}>
+                <a target={"_blank"}
+                    href={"https://docs.google.com/forms/d/e/1FAIpQLSdycHGGl_wmdq-wueqfU2SdzJ0lJY7Nju3FRsfDW6QZsNET6g/viewform?usp=header"}>
                     <span className={'rounded-xl p-4 bg-[#222222] hover:bg-[#333333]'}>Pledge Point Submission Form</span>
                 </a>
             </div>
