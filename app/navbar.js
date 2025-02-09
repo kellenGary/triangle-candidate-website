@@ -1,5 +1,10 @@
 export default function Navbar({ activePage, setActivePage }) {
+
     function handlePageChange(page) {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
         setActivePage(page);
     }
 
@@ -9,7 +14,7 @@ export default function Navbar({ activePage, setActivePage }) {
                 <img src="t.png" alt="logo" className={"cursor-pointer w-36 h-auto grayscale brightness-200 hover:grayscale-0 transition-all duration-300"} />
             </a>
 
-            {["home", "everyman", "pledge-test", "calendar"].map((page) => (
+            {["home", "schedule", "everyman", "pledge-test"].map((page) => (
                 <h4
                     key={page}
                     className={`cursor-pointer transition-all duration-500 hover:text-white ${

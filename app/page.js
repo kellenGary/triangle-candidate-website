@@ -3,15 +3,8 @@ import Navbar from "@/app/navbar";
 import {useState} from "react";
 import Everyman from "@/app/everyman";
 import Home from './home'
-import Calendar from './calendar'
-
-function PledgeTest() {
-    return null;
-}
-
-function Contacts() {
-    return null;
-}
+import Schedule from "@/app/schedule";
+import PledgeTest from "@/app/pledgeTest";
 
 export default function Page() {
     const [activePage, setActivePage] = useState('home')
@@ -25,8 +18,8 @@ export default function Page() {
             <Everyman />
         ) : activePage === "pledge-test" ? (
             <PledgeTest />
-        ) : activePage === "calendar" ? (
-            <Calendar />
+        ) : activePage === "schedule" ? (
+            <Schedule />
         ) : (
             <></>
         )}

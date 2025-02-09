@@ -2,6 +2,8 @@
 
 import LeaderboardUser from "./LeaderboardUser.js";
 import { useEffect, useState } from "react";
+import { BsArrowRepeat } from "react-icons/bs";
+
 const Leaderboard = () => {
     const [userData, setUserData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -18,31 +20,26 @@ const Leaderboard = () => {
 
                 name = name.toLowerCase();
 
-                let scores = score.split(" / ").map(num => parseInt(num, 10));
+                // Extract only the numerator (first part of "numerator / denominator")
+                let numerator = parseInt(score.split(" / ")[0], 10);
 
                 if (myMap.has(name)) {
-                    let prevScore = myMap.get(name).split(" / ").map(num => parseInt(num, 10));
-
-                    let numerator = prevScore[0] + scores[0];
-                    let denominator = prevScore[1] + scores[1];
-
-                    myMap.set(name, `${numerator} / ${denominator}`);
+                    let prevNumerator = myMap.get(name);
+                    myMap.set(name, prevNumerator + numerator);
                 } else {
-                    myMap.set(name, score);
+                    myMap.set(name, numerator);
                 }
             }
         }
 
         // Convert Map to an array of objects and sort by score (numerator)
         const sortedData = Array.from(myMap.entries())
-            .map(([name, score]) => {
-                const [num, denom] = score.split(" / ").map(n => parseInt(n, 10));
-                return { name, score, ratio: num / denom }; // Store ratio for sorting
-            })
-            .sort((a, b) => b.ratio - a.ratio); // Sort by highest ratio
+            .map(([name, score]) => ({ name, score })) // Store only the numerator
+            .sort((a, b) => b.score - a.score); // Sort by highest score
 
         setUserData(sortedData);
     }
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -65,7 +62,7 @@ const Leaderboard = () => {
     }, []);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <BsArrowRepeat className={'animate-spin'}/>;
     }
 
     if (error) {
@@ -73,15 +70,15 @@ const Leaderboard = () => {
     }
 
     return (
-        <div className="flex flex-col items-center w-fit justify-center">
+        <div className="flex flex-col items-center w-screen justify-center bg-[#262626]">
             <h1 className="text-2xl p-8 font-extralight">Current Leaderboard</h1>
-            <div className="w-screen table-auto border-collapse max-w-lg rounded-xl border border-[#444444] overflow-hidden">
+            <div className="w-screen table-auto border-collapse max-w-lg rounded-xl border border-[#444444] overflow-hidden drop-shadow-xl">
                 <div className="table w-full">
                     <div className="table-header-group">
                         <div className="table-row bg-[#444444]">
                             <div className="table-cell font-semibold text-center px-4 py-2">Rank</div>
                             <div className="table-cell font-semibold text-left px-4 py-2">Name</div>
-                            <div className="table-cell font-semibold text-left px-4 py-2">Score</div>
+                            <div className="table-cell font-semibold text-center px-4 py-2">Score</div>
                         </div>
                     </div>
                     <div className="table-row-group">
@@ -90,8 +87,9 @@ const Leaderboard = () => {
                                 <LeaderboardUser key={index} user={{
                                     rank: index + 1,
                                     name: user.name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
-                                    score: user.score
-                                }} />
+                                    score: user.score,
+
+                                }} pfp={`./Pledges SP25/${user.name}.JPG`} />
                             ))
                         ) : (
                             <div className="table-row">
@@ -102,6 +100,12 @@ const Leaderboard = () => {
                         )}
                     </div>
                 </div>
+            </div>
+            <div className={"m-12"} >
+                <a target={"_blank"}
+                   href={"https://docs.google.com/forms/d/e/1FAIpQLSdycHGGl_wmdq-wueqfU2SdzJ0lJY7Nju3FRsfDW6QZsNET6g/viewform?usp=header"}>
+                    <span className={'rounded-xl p-4 bg-[#373737] hover:bg-blue-500 drop-shadow-xl'}>Pledge Point Submission Form</span>
+                </a>
             </div>
         </div>
     );
