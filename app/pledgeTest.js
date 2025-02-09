@@ -4,7 +4,7 @@ export default function PledgeTest() {
     return (
         <div className="flex flex-col justify-center items-center pt-20">
             {/* Header */}
-            <img src={'./greekHeader.png'} className={'w-screen h-96 object-cover'}
+            <img src={'./greekHeader.png'} className={'w-screen max-h-96 object-cover'}
                  style={{
                      WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%)",
                      maskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%)"

@@ -31,7 +31,7 @@ export default function Everyman() {
                     <h1 className="text-2xl sm:text-xl md:text-2xl lg:text-3xl font-bold">
                         What you have to do:
                     </h1>
-                    <p className="text-xl sm:text-lg md:text-xl">1. Read the entire play starting on page 112 in your pledge book</p>
+                    <p className="text-xl sm:text-lg md:text-xl">1. Read the entire play starting on page 124 in your pledge book</p>
                     <p className="text-xl sm:text-lg md:text-xl">
                         2. Write one page about how the play made you feel.<br />
                         &nbsp;&nbsp;&nbsp;&nbsp;Do not write a summary.
