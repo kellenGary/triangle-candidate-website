@@ -62,7 +62,7 @@ const weeks = [
 export default function WeekByWeek() {
     return (
         <div className={'pb-12'}>
-            <h1 className={'text-4xl md:text-5xl lg:text-6xl font-bold py-16'}>Weekly Schedule</h1>
+            <h1 className={'text-4xl md:text-5xl lg:text-6xl font-bold px-8 py-16'}>Weekly Schedule</h1>
             {weeks.map((week) => (
                 <Week key={week.number} week={week} />
             ))}

@@ -22,7 +22,7 @@ export default function Home() {
             {/*    />*/}
             {/*</div>*/}
 
-            <img className={"h-full w-auto object-cover"} src={'./header2.png'} alt="Background"/>
+            <img className={"h-fit w-auto object-cover"} src={'./header2.png'} alt="Background"/>
             <InfoSection />
             <MemberStats />
             <Upcoming />

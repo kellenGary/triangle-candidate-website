@@ -70,15 +70,15 @@ const Leaderboard = () => {
     }
 
     return (
-        <div className="flex flex-col items-center w-screen justify-center bg-[#262626]">
-            <h1 className="text-2xl p-8 font-extralight">Current Leaderboard</h1>
-            <div className="w-screen table-auto border-collapse max-w-lg rounded-xl border border-[#444444] overflow-hidden drop-shadow-xl">
-                <div className="table w-full">
+        <div className="flex flex-col items-center w-screen justify-center bg-[#262626] p-4 px-4">
+            <h1 className="text-2xl p-4 font-extralight text-center">Current Leaderboard</h1>
+            <div className="w-full max-w-lg overflow-x-auto rounded-xl border border-[#444444] drop-shadow-xl ">
+                <div className="table w-full ">
                     <div className="table-header-group">
                         <div className="table-row bg-[#444444]">
-                            <div className="table-cell font-semibold text-center px-4 py-2">Rank</div>
-                            <div className="table-cell font-semibold text-left px-4 py-2">Name</div>
-                            <div className="table-cell font-semibold text-center px-4 py-2">Score</div>
+                            <div className="table-cell font-semibold text-center text-sm md:text-lg lg:text-xl px-4 py-2">Rank</div>
+                            <div className="table-cell font-semibold text-left text-sm md:text-lg lg:text-xl px-4 py-2">Name</div>
+                            <div className="table-cell font-semibold text-center text-sm md:text-lg lg:text-xl text-smpx-4 py-2">Score</div>
                         </div>
                     </div>
                     <div className="table-row-group">

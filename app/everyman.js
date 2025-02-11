@@ -31,22 +31,21 @@ export default function Everyman() {
                     <h1 className="text-2xl sm:text-xl md:text-2xl lg:text-3xl font-bold">
                         What you have to do:
                     </h1>
-                    <p className="text-xl sm:text-lg md:text-xl">1. Read the entire play starting on page 124 in your pledge book</p>
-                    <p className="text-xl sm:text-lg md:text-xl">
-                        2. Write one page about how the play made you feel.<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;Do not write a summary.
+                    <p className="text-lg sm:text-lg md:text-xl">1. Read the entire play starting on page 124 in your pledge book</p>
+                    <p className="text-lg sm:text-lg md:text-xl">
+                        2. Write one page about how the play made you feel. Do not write a summary.
                     </p>
-                    <p className="text-xl sm:text-lg md:text-xl">3. Submit it to your current new member educators. </p>
+                    <p className="text-lg sm:text-lg md:text-xl">3. Submit it to your current new member educators. </p>
                 </div>
 
                 <div className="p-8 bg-[#373737] rounded-xl w-full items-center align-middle">
                     <p className="text-2xl sm:text-xl md:text-2xl px-10 pb-8 text-center">Submit your Everyman PDF here</p>
-                    <form className="flex flex-col w-full px-20">
-                        <input type="text" placeholder="Name" className="mb-4 p-2 text-black rounded-md
+                    <form className="flex flex-col w-full md:px-10 lg:px-20">
+                        <input type="text" placeholder="Name" className="mb-4 p-2 text-black rounded-md w-full
                         bg-[#262626] border border-[#404040] drop-shadow-lg" />
                         <input type="email" placeholder="Email" className="mb-4 p-2 text-black rounded-md
                         bg-[#262626] border border-[#404040] drop-shadow-lg" />
-                        <input type="file" className="mb-4 p-2 self-center" />
+                        <input type="file" className="mb-4 p-4 self-center" />
                         <button type="submit" className="p-2 bg-blue-500 text-white rounded-md drop-shadow-lg"
                                 onSubmit={handleFileSubmit}>Submit</button>
                     </form>

@@ -2,7 +2,7 @@
 
 export default function InfoSection() {
     return (
-        <div className={"flex flex-col items-center p-20"}>
+        <div className={"flex flex-col items-center p-10 lg:p-20"}>
             <div className={'px-10 text-center pb-12 w-fit'}>
                 <h1 className={'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold py-8'}>Welcome to Triangle</h1>
                 <p className={'sm:text-lg md:text-xl lg:text-2xl'}>
