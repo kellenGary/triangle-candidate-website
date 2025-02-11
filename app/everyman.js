@@ -7,7 +7,7 @@ export default function Everyman() {
     }
 
     return (
-        <div className="h-fit flex flex-col items-center align-middle pt-28 gap-12 px-12">
+        <div className="h-fit flex flex-col items-center align-middle pt-8 md:pt-28 gap-12 px-12">
             <div className="p-10 rounded-xl bg-[#373737] flex flex-col lg:flex-row gap-12">
                 <img src="./everyman_3.jpg" className="grayscale rounded-xl invert object-cover w-auto md:h-80 lg:h-96" />
                 <div className="flex flex-col justify-center align-middle">

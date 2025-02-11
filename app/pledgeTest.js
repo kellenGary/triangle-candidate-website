@@ -2,7 +2,7 @@ import Footer from "@/app/footer";
 
 export default function PledgeTest() {
     return (
-        <div className="flex flex-col justify-center items-center pt-20">
+        <div className="flex flex-col justify-center items-center md:pt-20">
             {/* Header */}
             <img src={'./greekHeader.png'} className={'w-screen max-h-96 object-cover'}
                  style={{

@@ -1,4 +1,3 @@
-import Leaderboard from './Leaderboard'
 import Footer from "@/app/footer";
 import Upcoming from "@/app/upcoming";
 import InfoSection from "@/app/infoSection";
@@ -22,7 +21,7 @@ export default function Home() {
             {/*    />*/}
             {/*</div>*/}
 
-            <img className={"h-fit w-auto object-cover"} src={'./header2.png'} alt="Background"/>
+            <img className={"h-auto w-full object-cover"} src={'./headerTrim.png'} alt="Background"/>
             <InfoSection />
             <MemberStats />
             <Upcoming />

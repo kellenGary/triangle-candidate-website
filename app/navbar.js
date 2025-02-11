@@ -46,7 +46,7 @@ export default function Navbar({ activePage, setActivePage }) {
                 </button>
             </div>
             {menuOpen && (
-                <div className="fixed w-screen md:hidden flex flex-col items-center gap-4 py-4 bg-[#171717]">
+                <div className="fixed w-screen md:hidden z-30 flex flex-col items-center gap-4 py-4 bg-[#171717]">
                     {["home", "schedule", "everyman", "pledge-test"].map((page) => (
                         <h4
                             key={page}
