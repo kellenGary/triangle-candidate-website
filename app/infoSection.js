@@ -14,7 +14,7 @@ export default function InfoSection() {
                     Today, we continue to provide a unique social, academic and professional experience for STEM majors.
                 </p>
             </div>
-            <img src={'./crest.png'} className={"max-h-[10rem] h-auto w-fit"}/>
+            <img src={'./crest.png'} className={"max-h-[10rem] h-auto w-auto"}/>
         </div>
     )
 }

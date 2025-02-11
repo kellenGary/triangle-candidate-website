@@ -45,7 +45,7 @@ export default function Everyman() {
                         bg-[#262626] border border-[#404040] drop-shadow-lg" />
                         <input type="email" placeholder="Email" className="mb-4 p-2 text-black rounded-md
                         bg-[#262626] border border-[#404040] drop-shadow-lg" />
-                        <input type="file" className="mb-4 p-4 self-center" />
+                        <input type="file" className="mb-4 p-4 self-center w-[15rem] md:w-fit" />
                         <button type="submit" className="p-2 bg-blue-500 text-white rounded-md drop-shadow-lg"
                                 onSubmit={handleFileSubmit}>Submit</button>
                     </form>

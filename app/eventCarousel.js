@@ -33,9 +33,9 @@ export default function EventCarousel() {
     const prevSlide = () => setIndex((prev) => (prev - 1 + events.length) % events.length);
 
     return (
-        <div className="flex items-center justify-center gap-4 w-full py-8">
-            <BsChevronLeft className="scale-[2] cursor-pointer" onClick={prevSlide} />
-            <div className="relative w-[70rem] h-[30rem] max-h-[30rem] flex justify-center items-center overflow-hidden">
+        <div className="flex items-center justify-evenly gap-2 md:gap-4 w-full">
+            <BsChevronLeft className="scale-[1.5] md:scale-[2] cursor-pointer" onClick={prevSlide} />
+            <div className="relative w-[80vw] h-[25rem] md:w-[70rem] md:h-[30rem] max-h-[30rem] flex justify-center items-center overflow-hidden">
                 {events.map((event, i) => {
                     const position = (i - index + events.length) % events.length;
 
@@ -66,7 +66,7 @@ export default function EventCarousel() {
                 })}
             </div>
 
-            <BsChevronRight className="scale-[2] cursor-pointer" onClick={nextSlide} />
+            <BsChevronRight className="scale-[1.5] md:scale-[2] cursor-pointer" onClick={nextSlide} />
         </div>
     )
 }
