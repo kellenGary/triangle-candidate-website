@@ -1,10 +1,13 @@
 import { google } from 'googleapis';
 
 export async function GET() {
+    const base64EncodedKey = process.env.ENCODED_KEY;
+    const decodedKey = Buffer.from(base64EncodedKey, 'base64').toString('utf-8');
+    const key = JSON.parse(decodedKey)
     const auth = new google.auth.GoogleAuth({
         credentials: {
             client_email: process.env.GOOGLE_CLIENT_EMAIL,
-            private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n")
+            private_key: key.replace(/\\n/g, "\n")
         },
         scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"]
     });
