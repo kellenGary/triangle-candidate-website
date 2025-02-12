@@ -70,7 +70,7 @@ const Leaderboard = () => {
     }
 
     return (
-        <div className="flex flex-col items-center w-screen justify-center bg-[#262626] p-4 px-4">
+        <div className="flex flex-col items-center w-full justify-center bg-[#262626] p-4 px-4">
             <h1 className="text-2xl p-4 font-extralight text-center">Current Leaderboard</h1>
             <div className="w-full max-w-lg overflow-x-auto rounded-xl border border-[#444444] drop-shadow-xl ">
                 <div className="table w-full ">
