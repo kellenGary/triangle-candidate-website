@@ -18,7 +18,7 @@ const Leaderboard = () => {
                 let name = user[1];
                 let score = user[0];
 
-                name = name.toLowerCase();
+                name = name.toLowerCase().trim();
 
                 // Extract only the numerator (first part of "numerator / denominator")
                 let numerator = parseInt(score.split(" / ")[0], 10);
