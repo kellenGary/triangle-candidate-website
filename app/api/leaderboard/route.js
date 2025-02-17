@@ -16,10 +16,7 @@ export async function GET() {
     const spreadsheetId = process.env.GOOGLE_SHEET_ID;
 
     // Define the sheet names you want to query
-    const sheetNames = ["Form Responses 1", "Extra Credit"];
-
-    // "Form Responses 3", "Form Responses 4", "Form Responses 5",
-    //     "Form Responses 6", "Form Responses 7", "Form Responses 8", "Form Responses 9", "Form Responses 10"
+    const sheetNames = ["Form Responses 1", "Extra Credit", "Form Responses 4"];
 
     const range = "B:C";
     try {

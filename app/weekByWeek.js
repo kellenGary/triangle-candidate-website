@@ -20,7 +20,7 @@ const weeks = [
         date: '2/23 - 3/1',
         title: 'Meeting 3: Intro to Social and Risk Management',
         slides: '(Slides 47-57)',
-        quizLink: ''
+        quizLink: 'https://docs.google.com/forms/d/e/1FAIpQLScKoynsFgX_Xl5CLTXyoHnj8Y-RCbDscJwEANx2H-kxMTbDjw/viewform?usp=header'
     },
     {
         number: 4,
