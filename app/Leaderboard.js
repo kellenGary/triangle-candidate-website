@@ -40,6 +40,9 @@ const Leaderboard = () => {
         setUserData(sortedData);
     }
 
+    useEffect(() => {
+
+    }, []);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -89,7 +92,7 @@ const Leaderboard = () => {
                                     name: user.name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
                                     score: user.score,
 
-                                }} pfp={`./Pledges SP25/${user.name}.JPG`} />
+                                }} pfp={`./${user.name}.JPG`} />
                             ))
                         ) : (
                             <div className="table-row">
