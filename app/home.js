@@ -24,7 +24,7 @@ export default function Home() {
             <img className={"h-auto w-full object-cover"} src={'./headerTrim.png'} alt="Background"/>
             <InfoSection />
             <MemberStats />
-            <Upcoming />
+            {/*<Upcoming />*/}
 
 
             <Footer />
